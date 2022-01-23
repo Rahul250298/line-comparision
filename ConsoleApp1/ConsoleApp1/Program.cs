@@ -10,6 +10,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("welcome to linecomparision problems");
+            Line_comparision Linecom = new Line_comparision();
+            Linecom.length_line();
+            Linecom.function_check();
+            Console.ReadLine();
         }
     }
 }
