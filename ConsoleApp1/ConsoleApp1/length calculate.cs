@@ -16,6 +16,8 @@ namespace ConsoleApp1
         public int S_Two;
         public int R_One;
         public int R_Two;
+        public double Length_XY;
+        public double Length_SR;
         public void length_line()
         {
 
@@ -40,13 +42,23 @@ namespace ConsoleApp1
             Console.WriteLine("Enter vale R_Two");
             R_Two = Convert.ToInt32(Console.ReadLine());
 
-            double Length_XY = Math.Sqrt(Math.Pow((X_One - X_Two), 2) + Math.Pow((Y_Two - Y_One), 2));
-            Console.WriteLine("Length of Line 1 is:: " + Length_XY);
+                 Length_XY = Math.Sqrt(Math.Pow((X_Two - X_One), 2) + Math.Pow((Y_Two - Y_One), 2));
+            Console.WriteLine("Length of Value 1 is:: " + Length_XY);
 
-            double Length_SR = Math.Sqrt(Math.Pow((S_Two - S_One), 2) + Math.Pow((R_Two - R_One), 2));
-            Console.WriteLine("Length of Line 2 is: " + Length_SR);
+            Length_SR = Math.Sqrt(Math.Pow((S_Two - S_One), 2) + Math.Pow((R_Two - R_One), 2));
+            Console.WriteLine("Length of Value 2 is: " + Length_SR);
 
         }
+        public void function_check()
+        {
+            bool equal_result = Length_XY.Equals(Length_SR);
 
+            if (equal_result == false)
+                Console.WriteLine(" Length of XY and Length of SR are NOT Equal");
+            else
+                Console.WriteLine("Length of XY and Length of SR are Equal");
+            Console.ReadKey();
+
+        }
     }
 }
